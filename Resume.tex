@@ -1,0 +1,45 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the .tex file. The resume.cls file provides the resume style used for structuring the document.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass{resume} % Use the custom resume.cls style
+\usepackage{hyperref}
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Allen S. Mao} % Your name
+%\address{(school-year) International House, Room 375, 2299 Piedmont Avenue, Berkeley, CA 94720} % Your address
+\address{896 Seville Place, Fremont, CA 94539} % Your secondary addess (optional)
+\address{US Citizen \\ (510) 304-5132 \\ \href{mailto:allenmao@berkeley.edu}{allenmao@berkeley.edu}} % Your phone number and email
+\begin{document}
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\input{objective_software_eng_intern.tex}
+\begin{rSection}{Education}
+\begin{rSubsection}{University of California, Berkeley}{\em August 2019 - May 2021 (expected)}{BA---Computer Science (Linguistics Minor), GPA: 3.57/4.0}{Berkeley, California}
+\item Discrete Math \& Probability, Machine Structures, Designing Information Devices and Systems II
+\end{rSubsection}
+\begin{rSubsection}{Ohlone College}{\em August 2018 - May 2019}{Math and Computer Science for Transfer, GPA: 4.0/4.0}{Fremont, California}
+\item Josephine Butala Mathematics Scholarship; Douglas Gallacher, M.D. Memorial Scholarship
+\item Object-Oriented Programming in C++, Data Structures in C++, x86\_64 Assembly, Java Programming
+\end{rSubsection}
+\end{rSection}
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Work Experience}
+\input{exp_fnet_2019}
+\input{exp_usc-isi_2019.tex}
+\input{exp_bear_2018.tex}
+%\input{exp_ysp_2017.tex}
+\end{rSection}
+\begin{rSection}{Additional Activities and Miscellaneous Skills}
+\input{extra_curricular.tex}
+\end{rSection}
+
+
+\end{document}
