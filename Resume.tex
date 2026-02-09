@@ -34,14 +34,15 @@ right=0.5in]{geometry}              % specify right page margin
 \vspace{5pt}
 
 % contact information
-\centerline{\href{mailto:allenmao@berkeley.edu}{allenmao@berkeley.edu} | \href{https://mitcommlab.mit.edu/meche/commkit/portfolio/}{portfolio.com} | \href{https://github.com/citronella3alain}{github.com/citronella3alain} | US Citizen}
+\centerline{\href{mailto:allenmao@berkeley.edu}{allenmao@berkeley.edu} | \href{https://github.com/citronella3alain}{github.com/citronella3alain} | US Citizen}
 
 \vspace{-10pt}
 
 % skills section
 \section*{Skills}
-\textbf{CAD:} Siemens NX, CATIA V5, SolidWorks \\
-\textbf{Analysis:} Thermal Desktop, Abaqus, LS-DYNA, STAR-CCM+
+\textbf{AI \& Simulation:} Physics-Informed ML, NLP, PyTorch, VTK, PyVista \\
+\textbf{Infrastructure:} AWS (EKS, ECS, EC2, SageMaker), Kubernetes, Pulumi (IaC), Nvidia Triton, Docker, CI/CD \\
+\textbf{Languages \& Frameworks:} Python, Java, C/C++, Go, Flask, SQL, CMake, Angular, Vue.js
 
 \vspace{-6.5pt}
 
@@ -52,18 +53,18 @@ right=0.5in]{geometry}              % specify right page margin
 \begin{itemize}
   \item Architected a cloud-native data ingestion platform (Flask, Pulumi, AWS EKS, VTK) 
   to automate mesh and metadata extraction from physics simulations, enabling scalable data prep for ML training.
-  \item Defined ``canonical data" standards to decouple fragile ML logic from raw CAD/simulation formats, 
+  \item Defined ``canonical data'' standards to decouple fragile ML logic from raw CAD/simulation formats, 
   implementing robust CPU-side validation to prevent expensive failures during downstream GPU training.
   \item Optimized geometric processing performance by refactoring pipelines from PyVista to native VTK, 
-  achieving a 25\% reduction in memory footprint and enabling support for large-scale \textbf{VTKHDF} datasets.
+  achieving a 25\% reduction in memory footprint and enabling support for large-scale VTKHDF datasets.
   \item Advanced the open-source ecosystem by upstreaming patches to 
   \href{https://github.com/open-lasso-python/lasso-python}{lasso-python} and 
-  navigating \textbf{VTK C++ source} and \textbf{CMake} builds to identify and report core library bugs to maintainers.
-  \item Led cross-functional initiatives with Fluent, Ensight, and LSTC teams 
+  navigating VTK C++ source and CMake builds to identify and report core library bugs to maintainers.
+  \item Led cross-functional initiatives with Fluent, Ensight, DPF, and LSTC teams 
   to integrate native SDKs, eliminating manual data conversion and streamlining simulation-to-ML customer workflows.
 \end{itemize}
 
-\textbf{R\&D Engineer II, CTO Office,} {Ansys} -- San Jose, CA (Remote) \hfill Sep 2022 -- Dec 2023 \\
+\textbf{R\&D Engineer II, CTO Office,} {Ansys} -- San Jose, CA (Hybrid) \hfill Sep 2022 -- Dec 2023 \\
 \vspace{-9pt}
 \begin{itemize}
   \item Refactored a proprietary, library-agnostic ML framework into a modular, object-oriented architecture, 
@@ -72,57 +73,46 @@ right=0.5in]{geometry}              % specify right page margin
   enabling engineers to run ML-based physics simulation.
   \item Engineered a scalable research environment by deploying Jupyter Enterprise Gateway on EKS with isolated kernels, 
   eliminating cross-library dependency conflicts and reducing environment setup time for the R\&D team.
-  %\item Championed the transition from experimental code to product-ready prototypes by delivering high-impact technical 
-  %demonstrations at the 2023 Ansys Innovation Conference to validate future product roadmaps.
 \end{itemize}
 
 \textbf{Software Development Engineering Intern,} {Amazon} -- Portland, OR (Remote) \hfill May 2021 -- Aug 2021 \\
 \vspace{-9pt}
 \begin{itemize}
-  \item Modernized a legacy vendor search system by conducting stakeholder research and log analysis to architect a responsive Vue.JS and Spring application.
-  \item Implemented a Backend-for-Frontend (BFF) pattern to aggregate data from internal Vendor APIs, streamlining listings management for enterprise-scale partners.
+  \item Modernized a legacy vendor search system by conducting stakeholder research 
+  and log analysis to architect a Vue.js and Spring application, streamlining listings management for enterprise-scale partners.
 \end{itemize}
 
 \textbf{Software Engineering Intern,} {NASA Kennedy Space Center} -- Merritt Island, FL (Remote) \hfill Aug 2020 -- Dec 2020 \\
 \vspace{-9pt}
 \begin{itemize}
-  \item Engineered system and acceptance tests for the \textbf{Artemis} Launch Control System GUI, ensuring mission-critical software reliability for the Space Launch System (SLS) ground operations.
+  \item Engineered acceptance tests for the \textbf{Artemis} Launch Control System GUI, ensuring mission-critical software 
+  reliability for the Space Launch System ground operations.
 \end{itemize}
 
-% \textbf{Job Title,} \href{https://www.fstl1992.com/}{Company} -- City, ST \hfill XXXX -- XXXX \\
-% \vspace{-9pt}
+\textbf{NSF REU Fellow,} {USC Information Sciences Institute} -- Marina del Rey, CA \hfill Jun 2019 -- Aug 2019 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item \textbf{Founding Lead} of \textbf{SoMEF} (Software Metadata Extraction Framework), an open-source NLP pipeline 
+  that has since grown to 1,100+ commits, 20 contributors, and 30+ releases on GitHub.
+  \item Engineered the initial automated extraction logic to categorize scientific software documentation.
+  \item \textbf{First-authored} and presented research at the \textbf{2019 IEEE International Conference on Big Data}; 
+  project continues to be utilized by the scientific community for automated model integration.
+  %\item Developed metadata harvester via GitHub REST API to link unstructured READMEs 
+  %with structured metadata.
+\end{itemize}
 
 \vspace{-18.5pt}
 
-% projects section
-\section*{Projects}
-\textbf{Software Metadata Extraction Framework (SOMEF)} \hfill \href{https://github.com/KnowledgeCaptureAndDiscovery/somef}{github.com/KnowledgeCaptureAndDiscovery/somef} \\
-\vspace{-9pt}
+\section*{Leadership, Projects, \& Honors}
 \begin{itemize}
-  \item The more work experience you have, the less relevant outside-work projects tend to become
-  \item If you have something that really stands out, consider listing it here
+  \item \textbf{Data Tooling:} Developed a CoNLL-formatted NLP data visualizer for Berkeley research; 
+  engineered a Hackathon-winning (1st place) Chrome Extension for COVID-19 relief tracking.
+  \item \textbf{Technical Writing \& Communication:} Winner in the \textbf{Berkeley Economic Review} essay 
+  contest for analytical writing; authored a public-facing blog while working as a park ranger intern at Yellowstone National Park.
 \end{itemize}
-
-\textbf{Project Title} \hfill \href{https://mitcommlab.mit.edu/meche/commkit/portfolio/}{project.com} \\
-\vspace{-9pt}
-\begin{itemize}
-  \item Only list real projects, not mandatory school projects or trivial tutorial projects found online 
-  \item Something that someone uses to solve a problem
-  \item Something that has users (can be just you, as long as you use it often) and is actively maintained and not just rotting in a GitHub repo, never to see a PR for the rest of its life
-\end{itemize}
-
-% alternate formatting for projects section
-% \section*{Projects}
-% \begin{itemize}
-%   \item \textbf{QuantSoftware Toolkit:} Open source Python library for data analysis and machine learning for finance
-%   \item \textbf{GitHub Visualization:} Data visualization of Git Log data using D3 to analyze project trends over time
-%   \item \textbf{Recommendation System:} Music and movie recommender systems using collaborative filtering on public datasets
-%   \item \textbf{Mac Setup:} Book that gives step by step instructions on setting up developer environment on Mac OS
-% \end{itemize}
 
 \vspace{-18.5pt}
 
-% education section
 \section*{Education}
 \textbf{University of California, Berkeley} -- BA in Computer Science \hfill May 2022
 
