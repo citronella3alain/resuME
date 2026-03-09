@@ -51,12 +51,15 @@ right=0.5in]{geometry}              % specify right page margin
 \textbf{Senior AI Engineer,} {Ansys (part of Synopsys)} -- Sunnyvale, CA (Remote) \hfill Jan 2024 -- Present \\
 \vspace{-9pt}
 \begin{itemize}
-  \item Architected a cloud-native data ingestion platform (Flask, Pulumi, AWS EKS, VTK) 
+  \item Architected a cloud-native data ingestion platform (VTK, Flask, Pulumi, AWS EKS) 
   to automate mesh and metadata extraction from physics simulations, enabling scalable data prep for ML training.
   \item Defined ``canonical data'' standards to decouple fragile ML logic from raw CAD/simulation formats, 
   implementing robust CPU-side validation to prevent expensive failures during downstream GPU training.
-  \item Optimized geometric processing performance by refactoring pipelines from PyVista to native VTK, 
-  achieving a 25\% reduction in memory footprint and enabling support for large-scale VTKHDF datasets.
+  \item Expanded platform capabilities to support transient (time-series) physics data, specifically implementing 
+  high-performance ingestion for LS-DYNA d3plot and keyfile formats using \href{https://github.com/open-lasso-python/lasso-python}{lasso-python} 
+  and \href{https://dyna.docs.pyansys.com/}{pydyna}.
+  % \item Optimized geometric processing performance by refactoring pipelines from PyVista to native VTK, 
+  % achieving a 25\% reduction in memory footprint and enabling support for large-scale VTKHDF datasets.
   \item Advanced the open-source ecosystem by upstreaming patches to 
   \href{https://github.com/open-lasso-python/lasso-python}{lasso-python} and 
   navigating VTK C++ source and CMake builds to identify and report core library bugs to maintainers.
@@ -105,7 +108,7 @@ right=0.5in]{geometry}              % specify right page margin
 
 \section*{Leadership, Projects, \& Honors}
 \begin{itemize}
-  \item \textbf{Data Tooling:} Developed a CoNLL-formatted NLP data visualizer for Berkeley research; 
+  \item \textbf{Data Tooling:} Developed a visualizer for CoNLL-formatted NLP data called \href{https://github.com/citronella3alain/view-sesame}{view-sesame}; 
   engineered a Hackathon-winning (1st place) Chrome Extension for COVID-19 relief tracking.
   \item \textbf{Technical Writing \& Communication:} Winner in the \textbf{Berkeley Economic Review} essay 
   contest for analytical writing; authored a public-facing blog while working as a park ranger intern at Yellowstone National Park.
