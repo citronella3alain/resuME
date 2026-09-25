@@ -11,9 +11,9 @@ This branch contains a rewrite of the resume in [Typst](https://typst.app/), a m
 
 ## Files
 
-- [Resume.typ](file:///home/allen/work/resuME-typst/Resume.typ) – Typst source file.
-- [Resume.pdf](file:///home/allen/work/resuME-typst/Resume.pdf) – Compiled PDF document.
-- [Resume.png](file:///home/allen/work/resuME-typst/Resume.png) – High-resolution image preview.
+- [Resume.typ](file:///home/allen/work/resuME/typst/Resume.typ) – Typst source file.
+- [Resume.pdf](file:///home/allen/work/resuME/typst/Resume.pdf) – Compiled PDF document.
+- [Resume.png](file:///home/allen/work/resuME/typst/Resume.png) – High-resolution image preview.
 
 ## Compilation
 
