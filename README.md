@@ -1,33 +1,30 @@
 # Allen Mao - Resume (Typst)
 
-This branch contains a rewrite of the resume in [Typst](https://typst.app/), a modern markup-based typesetting system designed to replace LaTeX with faster compilation, cleaner syntax, and consistent typography.
+This branch contains a modern rewrite of the resume in [Typst](https://typst.app/) using the [`rendercv`](https://typst.app/universe/package/rendercv) package.
 
 ## Features
 
-- **Pixel-faithful layout**: Matches the 1-page structure, typography, and density of the original LaTeX version.
-- **Modern Typst syntax**: Uses native grids, show rules, and semantic helper functions without ugly LaTeX spacing workarounds (e.g. `\vspace{-18.5pt}`).
-- **ATS-friendly**: High-fidelity Unicode text extraction, standard fonts, and clickable hyperlinks.
-- **Fast compile times**: Compiles instantaneously (~15ms vs seconds in LaTeX).
+- **Professional Typography**: Uses the authentic **XCharter** font family (the exact font used in the LaTeX original), providing sharp, authoritative serifs.
+- **RenderCV Template Architecture**: Built on `@preview/rendercv:0.3.0`, providing battle-tested grid alignment, consistent entry margins, and clean section dividers.
+- **Modern Polish**: Subtle deep-navy accents (`#1a365d`) on section titles and links elevate readability while remaining 100% ATS-friendly.
+- **Easy Theme Switching**: Switch between Classic Serif (`XCharter`) and Modern Tech Sans-Serif (`Ubuntu`) with a single variable in `Resume.typ`.
+- **Sub-Second Builds**: Compiles in ~15ms with full live reload support.
 
 ## Files
 
 - [Resume.typ](file:///home/allen/work/resuME/typst/Resume.typ) – Typst source file.
 - [Resume.pdf](file:///home/allen/work/resuME/typst/Resume.pdf) – Compiled PDF document.
 - [Resume.png](file:///home/allen/work/resuME/typst/Resume.png) – High-resolution image preview.
+- [fonts/](file:///home/allen/work/resuME/typst/fonts) – Bundled XCharter OpenType fonts.
 
 ## Compilation
 
 To compile to PDF:
 ```bash
-typst compile Resume.typ Resume.pdf
-```
-
-To render a preview image (PNG):
-```bash
-typst compile Resume.typ Resume.png
+typst compile --font-path fonts Resume.typ Resume.pdf
 ```
 
 To live-preview with automatic recompilation on save:
 ```bash
-typst watch Resume.typ Resume.pdf
+typst watch --font-path fonts Resume.typ Resume.pdf
 ```
