@@ -9,60 +9,61 @@
 
 #set text(
   font: ("Libertinus Serif", "DejaVu Serif"),
-  size: 10.5pt,
+  size: 11pt,
   lang: "en",
   hyphenate: false,
 )
 
-#set par(justify: false, leading: 0.48em)
+#set par(justify: false, leading: 0.5em)
 
-// Link styling: black text like LaTeX hidelinks, maintaining clickable links in PDF
+// Link styling: plain black like LaTeX hidelinks, maintaining clickable links in PDF
 #show link: set text(fill: black)
-// To enable subtle underlines instead, uncomment below:
-// #show link: it => underline(stroke: 0.4pt + luma(180), offset: 1.5pt)[#it]
 
-// Section heading with horizontal divider rule
-#show heading.where(level: 1): it => block(width: 100%, above: 0.85em, below: 0.45em)[
-  #text(size: 1.15em, weight: "bold")[#it.body]
-  #v(-0.35em)
-  #line(length: 100%, stroke: 0.5pt + black)
-]
+// Section heading: bold title with a tight, crisp horizontal divider rule
+#show heading.where(level: 1): it => block(
+  width: 100%,
+  above: 1.1em,
+  below: 0.6em,
+  stack(
+    spacing: 0.25em,
+    text(size: 12pt, weight: "bold")[#it.body],
+    line(length: 100%, stroke: 0.5pt + black),
+  )
+)
 
-// Bullet lists: compact spacing matching LaTeX \setlist[itemize]{itemsep=-2pt}
+// Bullet list styling: indented bullets matching LaTeX leftmargin=12pt
 #set list(
   marker: [•],
-  body-indent: 0.45em,
+  indent: 12pt,
+  body-indent: 0.5em,
   spacing: 0.38em,
 )
-#show list: set block(above: 0.35em, below: 0.55em)
+#show list: set block(above: 0.32em, below: 0.65em)
 
-// Helper function for experience role headers with right-aligned dates
+// Helper function for experience role headers with baseline-aligned right dates
 #let role(title, company, location, dates) = {
-  grid(
-    columns: (1fr, auto),
-    align: (left, right),
-    [
-      *#title,* #company
-      #if location != "" [ -- #location]
-    ],
-    dates,
-  )
+  box(width: 100%)[
+    *#title,* #company
+    #if location != "" [ -- #location]
+    #h(1fr)
+    #dates
+  ]
 }
 
 // -----------------------------------------------------------------------------
 // Header
 // -----------------------------------------------------------------------------
 #align(center)[
-  #text(size: 22pt, weight: "bold")[Allen Mao] \
-  #v(2pt)
+  #text(size: 24pt, weight: "bold")[Allen Mao]
+  #v(4pt)
   #text(size: 10.5pt)[
-    #link("mailto:allenmao@berkeley.edu")[allenmao\@berkeley.edu] #h(4pt) | #h(4pt)
-    #link("https://github.com/citronella3alain")[github.com/citronella3alain] #h(4pt) | #h(4pt)
+    #link("mailto:allenmao@berkeley.edu")[allenmao\@berkeley.edu] #h(5pt) | #h(5pt)
+    #link("https://github.com/citronella3alain")[github.com/citronella3alain] #h(5pt) | #h(5pt)
     US Citizen
   ]
 ]
 
-#v(-0.25em)
+#v(0.2em)
 
 // -----------------------------------------------------------------------------
 // Skills
@@ -138,9 +139,8 @@
 // -----------------------------------------------------------------------------
 = Education
 
-#grid(
-  columns: (1fr, auto),
-  align: (left, right),
-  [*University of California, Berkeley* -- BA in Computer Science],
-  [May 2022],
-)
+#box(width: 100%)[
+  *University of California, Berkeley* -- BA in Computer Science
+  #h(1fr)
+  May 2022
+]
